@@ -14,23 +14,27 @@
             <legend class="col-form-label col-sm-2 float-none w-auto p-2">DB Data</legend>
             <div class="col-sm-6">
               <label for="type" class="form-label">DB Type</label>
-              <select name="type" type="host" class="form-control" id="type" placeholder="DB Type">
+              <select name="type" class="form-control" id="type" placeholder="DB Type">
                 <option selected value="mysql">MySQL</option>
                 <option value="pgsql">PostgreSQL</option>
               </select>
             </div>
+
             <div class="col-sm-6">
               <label for="host" required class="form-label">DB Host</label>
-              <input name="host" class="form-control" required id="host" placeholder="DB Host">
+              <input name="host" class="form-control" required id="host" placeholder="DB Host" value="localhost">
             </div>
+
             <div class="col-sm-6">
               <label for="database" required class="form-label">DB Database</label>
               <input name="database" type="text" class="form-control" required id="database" placeholder="DB Database">
             </div>
+
             <div class="col-sm-6">
               <label for="username" required class="form-label">DB Username</label>
               <input name="username" type="text" class="form-control" required id="username" placeholder="DB Username">
             </div>
+
             <div class="col-sm-6">
               <label for="password" class="form-label">DB Password</label>
               <input name="password" type="password" class="form-control" id="password" placeholder="DB Password">
