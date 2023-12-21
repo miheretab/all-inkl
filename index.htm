@@ -1,14 +1,89 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <head>
-<title></title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://code.highcharts.com/css/highcharts.css" rel="stylesheet" />
+    <link href="https://code.highcharts.com/dashboards/css/dashboards.css" rel="stylesheet" />
 
-<style type="text/css">
-</style>
+  </head>
 
-</head>
-<body>
-    
-</body>
+  <body>
+    <div class="container">
+    <form>
+        <fieldset class="row mb-3 border p-2">
+            <legend class="col-form-label col-sm-2 float-none w-auto p-2">DB Data</legend>
+            <div class="col-sm-6">
+              <label for="type" class="form-label">DB Type</label>
+              <select name="type" type="host" class="form-control" id="type" placeholder="DB Type">
+                <option selected value="mysql">MySQL</option>
+                <option value="pgsql">PostgreSQL</option>
+              </select>
+            </div>
+            <div class="col-sm-6">
+              <label for="host" required class="form-label">DB Host</label>
+              <input name="host" class="form-control" required id="host" placeholder="DB Host">
+            </div>
+            <div class="col-sm-6">
+              <label for="database" required class="form-label">DB Database</label>
+              <input name="database" type="text" class="form-control" required id="database" placeholder="DB Database">
+            </div>
+            <div class="col-sm-6">
+              <label for="username" required class="form-label">DB Username</label>
+              <input name="username" type="text" class="form-control" required id="username" placeholder="DB Username">
+            </div>
+            <div class="col-sm-6">
+              <label for="password" class="form-label">DB Password</label>
+              <input name="password" type="password" class="form-control" id="password" placeholder="DB Password">
+            </div>
+        </fieldset>
 
+        <fieldset class="row mb-3 border p-2">
+            <legend class="col-form-label col-sm-2 float-none w-auto p-2">DB Query</legend>
+            <div class="col-sm-6">
+              <label for="type" class="form-label">V Axis</label>
+              <input name="xaxis" type="text" class="form-control" required id="xaxis" placeholder="V Axis">
+            </div>
+
+            <div class="col-sm-6">
+              <label for="type" class="form-label">Legend</label>
+              <input name="yaxis" type="text" class="form-control" required id="yaxis" placeholder="Legend">
+            </div>
+
+            <div class="col-sm-6">
+              <label for="chartType" class="form-label">Chart Type</label>
+              <select name="chartType" class="form-control" id="chartType" placeholder="Chart Type">
+                <option selected value="multiple">Multiple</option>
+                <option value="single">Single</option>
+              </select>
+            </div>
+
+            <div class="col-sm-6">
+              <label for="graphType" class="form-label">Graph Type</label>
+              <select name="graphType" class="form-control" id="graphType" placeholder="Graph Type">
+                <option selected value="bar">Bar</option>
+                <option value="line">Line</option>
+                <option disabled value="pie">Pie</option>
+              </select>
+            </div>
+
+            <div class="col-sm-12 mb-3">
+              <label for="host" class="form-label">Query</label>
+              <textarea name="query" class="form-control" required id="host" placeholder="Query" rows="5"></textarea>
+            </div>
+
+            <div class="col-sm-2">
+                <button type="submit" class="btn btn-primary">Search</button>
+            </div>
+        </fieldset>
+    </form>
+    <div id="chart_div"></div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    <!--Load the AJAX API-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+  </body>
 </html>
