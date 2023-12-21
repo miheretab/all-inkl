@@ -12,3 +12,7 @@ Instructions
 - and also for other test with pie chart
     => I have used sample query which is found sample_query_single.sql
     => and with Chart Type "single" and Graph Type "Pie"
+
+![image](https://github.com/miheretab/all-inkl/assets/3458617/3faccdaf-5afd-4e09-9228-88ab581dfb4e)
+![image](https://github.com/miheretab/all-inkl/assets/3458617/1aee45fc-769e-4740-82dc-a69a3373ff60)
+
